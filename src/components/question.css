@@ -1,0 +1,62 @@
+.question {
+	border-bottom: 1px solid #DBDEF0;
+	margin-bottom: 0.9375rem; /* 15/16 */
+	padding-bottom: 0.9375rem; /* 15/16 */
+}
+
+.question__answers {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -6px;
+}
+
+.form-check {
+	position: relative;
+}
+
+.form-check input {
+	opacity: 0;
+	position: absolute;
+}
+
+.form-check label {
+	align-items: center;
+	border: 1px solid #4D5B9E;
+	border-radius: 8px;
+	color: #293264;
+	cursor: pointer;
+	display: flex;
+	font-size: 10px;
+	font-weight: 500;
+	justify-content: center;
+	margin: 6px;
+	min-width: 66px;
+	padding: 3px 9px;
+	transition: all 200ms ease-in;
+}
+
+.form-check input:not(:disabled) + label:hover {
+	background-color: #D6DBF5;
+}
+
+.form-check input:checked + label {
+	background-color: #D6DBF5;
+	border-color: #D6DBF5;
+}
+
+.form-check input:disabled + label {
+	cursor: not-allowed;
+	opacity: .5;
+}
+
+.form-check--is-correct input:disabled + label,
+.form-check--is-valid input:disabled + label {
+	background-color: #94D7A2;
+	border-color: #94D7A2;
+	opacity: 1;
+}
+
+.form-check--is-incorrect input:disabled + label {
+	background-color: #F8BCBC;
+	border-color: #F8BCBC;
+}

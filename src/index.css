@@ -1,0 +1,124 @@
+:root {
+	font-family: Inter, sans-serif;
+	line-height: normal;
+	font-size: 100%;
+	font-weight: 400;
+
+	color: #293264;
+	background-color: #F5F7FB;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	font-weight: 500;
+	color: #646cff;
+	text-decoration: inherit;
+}
+
+a:hover {
+	color: #535bf2;
+}
+
+body {
+	min-width: 320px;
+	min-height: 100vh;
+}
+
+main {
+	flex: 0 0 100%;
+	max-width: 100%;
+	width: 100%;
+}
+
+h1 {
+	font: 700 2rem Karla, sans-serif;
+	margin-bottom: 0.6875rem; /* 11/16 */
+}
+
+h2 {
+	font: 700 1rem Karla, sans-serif;
+	margin-bottom: 0.75rem; /* 12/16 */
+}
+
+p.lead {
+	font-size: 1rem;
+	margin-bottom: 1.8125rem; /* 29/16 */
+}
+
+.btn {
+	background: none #4D5B9E;
+	border: 1px solid #4D5B9E;
+	border-radius: 10px;
+	color: #F5F7FB;
+	cursor: pointer;
+	font: 600 0.625rem/normal Inter, sans-serif; /* 10/16 */
+	min-width: 120px;
+	padding: 0.6875rem 1.3125rem; /* 11/16 21/16 */
+	transition: all 200ms ease-in;
+}
+
+.btn:disabled {
+	cursor: not-allowed;
+	opacity: .5;
+}
+
+.btn--large {
+	font-size: 1rem;
+	min-width: 195px;
+	padding: 0.9375rem 1.75rem; /* 15/16 28/16 */
+}
+
+.btn:not(:disabled):hover, .btn:not(:disabled):active, .btn:not(:disabled):focus {
+	background-color: #D6DBF5;
+	border-color: #D6DBF5;
+	color: #4D5B9E;
+}
+
+.btn:focus,
+.btn:focus-visible {
+	outline: 4px auto -webkit-focus-ring-color;
+}
+
+#root {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 40px calc(75 / 550 * 100vw); /* 75/550 */
+	position: relative;
+	width: 100%;
+}
+
+.blob {
+	pointer-events: none;
+	position: absolute;
+	z-index: 1;
+}
+
+.blob--top-right {
+	right: 0;
+	top: 0;
+}
+
+.blob--bottom-left {
+	bottom: 0;
+	left: 0;
+	transition: transform 200ms ease-in-out;
+}
+
+.has-started .blob--bottom-left {
+	transform: scale(0.676767676767677);
+	transform-origin: 0 100%;
+}
