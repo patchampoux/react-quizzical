@@ -8,11 +8,14 @@ function App() {
 	const [started, setStarted] = useState(false)
 
 	return (
-		<main className={started ? 'has-started' : 'not-started'}>
-			{!started ? <Home start={() => setStarted(prevState => !prevState)}/> : <Quiz/>}
+		<>
+			<main className={started ? 'has-started' : 'not-started'}>
+				{!started ? <Home start={() => setStarted(prevState => !prevState)}/> : <Quiz/>}
+
+			</main>
 			<img className="blob blob--top-right" aria-hidden={true} src={blobTopRight} alt="Decorative blob" width={158} height={151}/>
 			<img className="blob blob--bottom-left" aria-hidden={true} src={blobBottomLeft} alt="Decorative blob" width={148} height={118}/>
-		</main>
+		</>
 	)
 }
 
